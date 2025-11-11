@@ -24,7 +24,7 @@ function amariredev_smart_footer() {
         display: block;
         margin: 0 auto;
         text-align: center;
-        padding: 14px 20px;
+        padding: 14px 20px 0px 20px;
         font-size: 14px;
         font-weight: 500;
         font-family: "Arial", sans-serif;
