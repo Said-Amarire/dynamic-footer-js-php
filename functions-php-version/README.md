@@ -46,11 +46,6 @@ A fully dynamic, multilingual, and adaptive WordPress footer designed to integra
 
 1. Add the following PHP function to your WordPress theme's `functions.php`:
 
-```php
-<?php
-add_action('wp_footer','amariredev_smart_footer',9999);
->
-
 ## Paste the complete amariredev_smart_footer function (from the provided code) into functions.php.
 
 The footer will automatically appear on all pages.
