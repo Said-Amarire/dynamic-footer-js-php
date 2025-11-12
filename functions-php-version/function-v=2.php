@@ -1,4 +1,4 @@
-function amariredev_smart_footer() {
+function ad_smart_footer() {
     $site_name = get_bloginfo('name');
     if (!$site_name) {
         $host = parse_url(home_url(), PHP_URL_HOST);
@@ -8,7 +8,7 @@ function amariredev_smart_footer() {
     $site_url = home_url('/');
     $year = date('Y');
     ?>
-    <div id="amariredev-footer" class="amariredev-footer">
+    <div id="ad-footer" class="ad-footer">
         <p>
             <span data-i18n="rights">All rights reserved</span> © <?php echo esc_html($year); ?> 
             <a href="<?php echo esc_url($site_url); ?>" class="footer-site-name" target="_blank" rel="noopener">
@@ -20,7 +20,7 @@ function amariredev_smart_footer() {
     </div>
 
     <style>
-    .amariredev-footer {
+    .ad-footer {
         display: block;
         margin: 0 auto;
         text-align: center;
@@ -35,16 +35,16 @@ function amariredev_smart_footer() {
         opacity: 0;
         transform: translateY(30px);
     }
-    .amariredev-footer.visible {
+    .ad-footer.visible {
         opacity: 1;
         transform: translateY(0);
     }
-    .amariredev-footer a {
+    .ad-footer a {
         text-decoration: none;
         font-weight: 600;
         transition: color 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
-    .amariredev-footer a:hover {
+    .ad-footer a:hover {
         text-decoration: underline;
         filter: brightness(1.2);
     }
@@ -52,7 +52,7 @@ function amariredev_smart_footer() {
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const footer = document.getElementById("amariredev-footer");
+        const footer = document.getElementById("ad-footer");
         if (!footer) return;
 
         const translations = {
@@ -171,4 +171,4 @@ function amariredev_smart_footer() {
     </script>
     <?php
 }
-add_action('wp_footer','amariredev_smart_footer',9999);
+add_action('wp_footer','ad_smart_footer',9999);
