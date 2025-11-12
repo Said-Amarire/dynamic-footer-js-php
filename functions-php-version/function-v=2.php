@@ -48,6 +48,9 @@ function ad_smart_footer() {
         text-decoration: underline;
         filter: brightness(1.2);
     }
+    .ad-footer p {
+        margin: 0;
+    }
     </style>
 
     <script>
