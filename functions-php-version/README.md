@@ -52,7 +52,7 @@ add_action('wp_footer','amariredev_smart_footer',9999);
 
 ## Paste the complete amariredev_smart_footer function (from the provided code) into functions.php.
 
-The footer will automatically appear on all pages.
+The footer will automatically appear on all pages.```
 
 Usage
 
