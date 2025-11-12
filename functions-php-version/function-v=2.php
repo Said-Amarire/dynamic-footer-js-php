@@ -58,7 +58,7 @@ function amariredev_smart_footer() {
         const translations = {
             en:{rights:"All rights reserved",builtby:"Built by"},
             fr:{rights:"Tous droits réservés",builtby:"Créé par"},
-            ar:{rights:"جميع الحقوق محفوظة",builtby:"تم الإنشاء بواسطة"},
+            ar:{rights:"جميع الحقوق محفوظة",builtby:"من تطوير"},
             es:{rights:"Todos los derechos reservados",builtby:"Creado por"},
             de:{rights:"Alle Rechte vorbehalten",builtby:"Erstellt von"},
             it:{rights:"Tutti i diritti riservati",builtby:"Creato da"},
