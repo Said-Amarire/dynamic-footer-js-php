@@ -8,13 +8,13 @@ A fully dynamic, multilingual, and adaptive WordPress footer designed to integra
 
 1. **Dynamic Language Detection**
    - Automatically detects the dominant language on the page.
-   - Supports multiple languages: English (en), French (fr), Arabic (ar), Spanish (es), German (de), Italian (it), Portuguese (pt), Russian (ru), Chinese (zh), Japanese (ja), Korean (ko), Hindi (hi).
+   - Supports multiple languages: English, French, Arabic, Spanish, German, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Hindi.
    - Translates footer texts accordingly:
-     - Rights reserved message (`All rights reserved`).
-     - Built by text (`Built by`).
+     - Rights reserved message.
+     - Built by text.
 
 2. **Adaptive Colors**
-   - Automatically matches the footer text color with the main page headings (`H1-H6`).
+   - Automatically matches the footer text color with the main page headings (H1-H6).
    - Ensures contrast against the background for visibility.
    - Automatically adjusts link colors with slightly bold font.
    - Footer top border color adapts to background for subtle separation.
@@ -37,58 +37,63 @@ A fully dynamic, multilingual, and adaptive WordPress footer designed to integra
    - Re-evaluates language, colors, and visibility automatically.
 
 7. **Cross-browser Compatible**
-   - Tested with modern browsers.
    - Smooth transition animations for fade-in and slide effects.
 
 ---
 
 ## Installation
 
-1. Add the following PHP function to your WordPress theme's `functions.php`:
+1. Add the footer to your WordPress theme.
+2. It will automatically appear on all pages.
+3. Works out-of-the-box with any theme.
 
-## Paste the complete amariredev_smart_footer function (from the provided code) into functions.php.
+---
 
-The footer will automatically appear on all pages.
+## Usage
 
-Usage
+- Fully automatic: detects page headings, background colors, and dominant language.
+- Can handle pages with animations or delayed content.
+- Always keeps footer centered and readable.
 
-Automatic Setup: No need to modify any HTML. Footer detects page headings, background colors, and dominant language.
+---
 
-Customization: You can adjust transition duration, delay time, or add custom styles in the <style> block inside the function.
+## Supported Languages
 
-Dynamic Content Ready: Works seamlessly with pages that load content dynamically or use animations.
+| Language   |
+|-----------|
+| English   |
+| French    |
+| Arabic    |
+| Spanish   |
+| German    |
+| Italian   |
+| Portuguese|
+| Russian   |
+| Chinese   |
+| Japanese  |
+| Korean    |
+| Hindi     |
 
-Supported Languages
-Code	Language
-en	English
-fr	French
-ar	Arabic
-es	Spanish
-de	German
-it	Italian
-pt	Portuguese
-ru	Russian
-zh	Chinese
-ja	Japanese
-ko	Korean
-hi	Hindi
-Notes
+---
 
-Ensures contrast between text and background for readability.
+## Notes
 
-Footer top border always matches text color with low opacity for subtlety.
+- Ensures text is always readable over background.
+- Footer top border matches text color subtly.
+- Works with LTR and RTL layouts.
+- Compatible with dynamic or animated content.
+- Designed to integrate seamlessly with any theme.
+- Maintains SEO integrity as content is in the DOM.
 
-Works with LTR and RTL layouts.
+---
 
-Designed to integrate with any theme without overriding existing styles.
+## License
 
-Maintains SEO integrity as content is dynamically generated but still visible in DOM.
+Provided by **Amarire Dev**. Free for personal or commercial use. Credit is appreciated.
 
-License
+---
 
-This code is provided by Amarire Dev. You can freely use it on personal or commercial projects, but credit is appreciated.
+## Author
 
-Author
-
-Amarire Dev
-https://amarire.dev
+**Amarire Dev**  
+[https://amarire.dev](https://amarire.dev)
