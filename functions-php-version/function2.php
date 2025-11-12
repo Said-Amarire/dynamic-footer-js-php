@@ -24,7 +24,7 @@ function amariredev_smart_footer() {
         display: block;
         margin: 0 auto;
         text-align: center;
-        padding: 14px 20px 0px 20px;
+        padding: 14px 20px;
         font-size: 14px;
         font-weight: 500;
         font-family: "Arial", sans-serif;
@@ -110,7 +110,7 @@ function amariredev_smart_footer() {
             return {bg,color:textColor,border:borderColor};
         };
 
-        const applyAll = ()=>{
+        const applyFooter = ()=>{
             const lang = detectDominantLanguage();
             footer.querySelectorAll("[data-i18n]").forEach(el=>{
                 const key = el.getAttribute("data-i18n");
@@ -134,16 +134,39 @@ function amariredev_smart_footer() {
             if(pos){ window.scrollTo(0, parseInt(pos)); localStorage.removeItem("scrollPos"); }
         });
 
-        const observer = new IntersectionObserver(entries=>{
-            if(entries[0].isIntersecting){ applyAll(); observer.disconnect(); }
-        },{threshold:0.3});
-        observer.observe(footer);
+        let footerShown = false;
+        const checkFooterVisibility = () => {
+            if(footerShown) return;
+            const scrollBottom = window.innerHeight + window.scrollY;
+            if(scrollBottom >= document.body.offsetHeight - 50){
+                footerShown = true;
+                setTimeout(applyFooter, 3000);
+            }
+        };
+        window.addEventListener("scroll", checkFooterVisibility);
+        window.addEventListener("load", checkFooterVisibility);
 
-        window.addEventListener("scroll", ()=>{
-            if((window.innerHeight + window.scrollY) >= document.body.offsetHeight-50){
-                applyAll();
+        const ensureBottom = ()=>{
+            const footerHeight = footer.offsetHeight;
+            const pageHeight = document.body.scrollHeight;
+            const windowHeight = window.innerHeight;
+            if(pageHeight < windowHeight){
+                footer.style.position="absolute";
+                footer.style.bottom="0";
+                footer.style.width="100%";
+            } else {
+                footer.style.position="relative";
+            }
+        };
+        window.addEventListener("resize", ensureBottom);
+        window.addEventListener("load", ensureBottom);
+
+        const observer = new MutationObserver(()=>{
+            if(!footerShown){
+                checkFooterVisibility();
             }
         });
+        observer.observe(document.body,{childList:true,subtree:true,attributes:true});
     });
     </script>
     <?php
